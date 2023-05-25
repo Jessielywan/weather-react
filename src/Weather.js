@@ -84,7 +84,7 @@ export default function Weather() {
                 </div>
               </div>
               <footer>
-                <a href="https://github.com/Jessielywan/weather-react" target="_blank">Open-source Code</a> by Jessie Wan
+                <a href="https://github.com/Jessielywan/weather-react" target="_blank" rel="noopener noreferrer">Open-source Code</a> by Jessie Wan
               </footer>
             </div>
         </div>
