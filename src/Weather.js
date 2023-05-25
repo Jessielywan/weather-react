@@ -81,6 +81,14 @@ export default function Weather() {
                       <span className="weather-forecast-temperature-min">10°</span>
                     </div>
                   </div>
+                  <div className="col-2">
+                    <div className="weather-forecast-date">Mon</div>
+                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt="" width="90"></img>
+                    <div className="weather-forecast-temperatures">
+                      <span className="weather-forecast-temperature-max">17°</span>
+                      <span className="weather-forecast-temperature-min">10°</span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <footer>
