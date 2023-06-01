@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+import CurrentDate from "./currentDate";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false});
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
-      date: "Thursday 14:55",
+      date: new Date(response.data.time * 1000),
       wind: response.data.wind.speed,
       city: response.data.city,
       description: response.data.condition.description,
@@ -26,7 +26,7 @@ export default function Weather(props) {
               <form>
                 <div className="row">
                   <div className="col-9">
-                    <input type="search" placeholder="Enter a city.." className="form-control search-input" autocomplete="off" />
+                    <input type="search" placeholder="Enter a city.." className="form-control search-input" autoComplete="off" />
                   </div>
                   <div className="col-3 p-0">
                     <input type="submit" className="btn btn-primary w-100" value="Search" />
@@ -38,7 +38,7 @@ export default function Weather(props) {
               <div className="row">
                 <div className="col-6">
                   <h1>{weatherData.city}</h1>
-                  <h2>{weatherData.date}</h2>
+                  <CurrentDate date={weatherData.date} />
                   <ul>
                     <li className="text-capitalize">{weatherData.description}</li>
                     <li>
