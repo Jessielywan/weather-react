@@ -7,6 +7,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ready: false});
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
@@ -15,7 +16,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.city,
       description: response.data.condition.description,
-      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png`,
+      icon: response.data.condition.icon
     });
   }
 
@@ -57,7 +58,6 @@ export default function Weather(props) {
                 </div>
               </form>
               <WeatherInfo data={weatherData} />
-
             </div>
             <div className="weather-forecast">
               <div className="row">

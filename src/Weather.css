@@ -85,6 +85,11 @@
     font-size: 16px;
 }
 
+.Weather canvas {
+    height:80px;
+    width: 80px;
+}
+
 .Weather footer {
     font-size:14px;
     margin: 0 auto;
