@@ -7,6 +7,7 @@
 
 .WeatherInfo {
     margin-top: 20px;
+    color: rgba(203, 151, 181, 0.8);
  }
 
 .Weather form {
@@ -79,7 +80,6 @@
 .Weather li {
     font-weight: 500;
     margin-bottom: 5px;
-    color: rgba(203, 151, 181, 0.8);
     list-style: none;
     line-height: 20px;
     font-size: 16px;
