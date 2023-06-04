@@ -9,7 +9,7 @@ export default function CurrentDate(props) {
         "Thursday",
         "Friday",
         "Saturday"
-    ]
+    ];
 
 
     let day = days[props.date.getDay()];
@@ -25,5 +25,5 @@ export default function CurrentDate(props) {
         <div>
         {day} {hours}:{minutes}
         </div>
-    )
+    );
 }
