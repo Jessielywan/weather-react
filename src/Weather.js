@@ -8,9 +8,10 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ready: false});
   function handleResponse(response) {
-    console.log(response.data)
+    console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time * 1000),
@@ -59,7 +60,7 @@ export default function Weather(props) {
                 </div>
               </form>
               <WeatherInfo data={weatherData} />
-              <WeatherForecast code="clear-sky-day" />
+              <WeatherForecast coordinates={weatherData.coordinates} />
             </div>
             <footer>
               <a href="https://github.com/Jessielywan/weather-react" target="_blank" rel="noopener noreferrer">Open-source Code</a> by Jessie Wan
