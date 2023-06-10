@@ -2,10 +2,10 @@
     text-align: center;
     margin-top: 35px;
     
-    color: rgba(192, 113, 160, 0.989);
+    color: rgba(165, 46, 115, 0.8);
 }
 
 .WeatherForecast-temperature-min {
-    opacity: 0.5;
+    opacity: 0.7;
     margin-left: 5px;
 }
