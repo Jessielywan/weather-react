@@ -55,21 +55,22 @@
     color: rgba(183, 137, 164, 0.8);
 }
 
-.Weather .temperature {
+.Weather .temperature
+{
     font-weight: bold;
     color: #c45985;
-    font-weight: 100;
+    font-weight: 400;
     margin-left: 10px;
-    font-size: 80px;
+    font-size: 65px;
     line-height: 1;
 }
 
 .Weather .unit {
     color: #c45985;
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 500;
     position: relative;
-    top: -6px;
+    top: -30px;
 }
 
 .Weather ul {
@@ -97,10 +98,6 @@
 .temperature-container .active {
     color: #c45985;
     cursor: default;
-    text-decoration: none;
-}
-
-.temperature-container .active:hover {
     text-decoration: none;
 }
 
